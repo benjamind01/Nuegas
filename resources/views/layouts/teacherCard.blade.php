@@ -3,7 +3,7 @@
         <div id="profil" class="flex flex-row items-center">
             <img class="w-10 h-10 ml-4" src="{{ asset('pp.png') }}" alt="profil picture">
             <div id="written" class="ml-4">
-                <h4 id="name" class="text-name-color font-medium text-lg">Curious George</h4>
+                <h4 id="name" class="text-name-color font-medium text-lg">{{ $teacher->name }}</h4>
                 <span class="text-gray text-sm">Mathematics</span>
             </div>
         </div>

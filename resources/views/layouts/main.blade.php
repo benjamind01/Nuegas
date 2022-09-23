@@ -24,8 +24,9 @@
             </div>
         </div>
         <div id="cards" class="mt-8 flex flex-row">
-            @include('layouts.teacherCard')
-            @include('layouts.teacherCard')
+            @foreach($teachers as $teacher)
+                @include('layouts.teacherCard')
+            @endforeach
         </div>
     </div>
     <div id="tasks" class="mt-10 flex flex-col w-11/12">

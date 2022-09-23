@@ -30,11 +30,11 @@
                 <p class="ml-4">Understanding tree search</p>
             </div>
             <div id="step" class="flex flex-row items-center mt-6">
-                <h4 class="bg-rectangle py-2 px-4 rounded-xl">1</h4>
+                <h4 class="bg-rectangle py-2 px-4 rounded-xl">2</h4>
                 <p class="ml-4">Understanding tree search</p>
             </div>
             <div id="step" class="flex flex-row items-center mt-6">
-                <h4 class="bg-rectangle py-2 px-4 rounded-xl">1</h4>
+                <h4 class="bg-rectangle py-2 px-4 rounded-xl">3 </h4>
                 <p class="ml-4">Understanding tree search</p>
             </div>
         </div>
