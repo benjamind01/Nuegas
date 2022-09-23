@@ -8,11 +8,9 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="flex flex-row w-screen h-screen">
+<body class="flex flex-row w-screen h-screen  bg-gray-background">
     @include('layouts.navbar')
     @include('layouts.main')
-    <div id="informations" class="w-3/12 bg-black">
-        
-    </div>
+    @include('layouts.dueTask')
 </body>
 </html>

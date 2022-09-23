@@ -23,6 +23,9 @@ module.exports = {
             'help': '#141522',
             'white': '#FFFFFF',
             'gray': '#54577A',
+            'gray-background': '#FAFAFA',
+            'name-color': '#141522',
+            'star': '#FFB054',
         },
     },
 

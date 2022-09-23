@@ -11,9 +11,40 @@
             <img class="w-10 ml-4" src="{{ asset('pp.png') }}" alt="profil picture">
         </div>
     </div>
-    <div id="monthlyMentors">
+    <div id="Teachers" class="mt-8 w-11/12">
+        <div class="flex flex-row items-center justify-between">
+            <h3 class="font-PlusJakartaSans font-medium text-2xl">Teachers</h3>
+            <div class="flex flex-row">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg> 
+            </div>
+        </div>
+        <div id="cards" class="mt-8 flex flex-row">
+            @include('layouts.teacherCard')
+            @include('layouts.teacherCard')
+        </div>
+    </div>
+    <div id="tasks" class="mt-10 flex flex-col w-11/12">
         <div>
-            
+            <div class="flex flex-row items-center justify-between">
+                <h3 class="font-PlusJakartaSans font-medium text-2xl">Upcoming Tasks</h3>
+                <div class="flex flex-row">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg> 
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-row mt-4">
+            @include('layouts.taskCard')
+            @include('layouts.taskCard')
         </div>
     </div>
 </div>
