@@ -1,8 +1,8 @@
 <div class="bg-white w-6/12  p-4 rounded-3xl ml-4 mt-4 flex flex-col">
     <img class="w-11/12  h-28 ml-4 object-cover" src="{{ asset('Image.png') }}" alt="profil picture">
     <div id="taskInfos" class="mt-2 text-left">
-        <h4 id="name" class="text-name-color font-medium text-lg">Algorithmic 101</h4>
-        <span class="text-gray text-sm">Algorithmic</span>
+        <h4 id="name" class="text-name-color font-medium text-lg">{{ $task->name }}</h4>
+        <span class="text-gray text-sm">{{ $task->topic }}</span>
     </div>
     <div class="w-full flex flex-row justify-between items-center mt-6">
         <h4 id="name" class="text-name-color font-medium text-md">Progress</h4>

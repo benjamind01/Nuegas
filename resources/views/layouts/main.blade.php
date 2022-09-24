@@ -44,8 +44,9 @@
             </div>
         </div>
         <div class="flex flex-row mt-4">
-            @include('layouts.taskCard')
-            @include('layouts.taskCard')
+            @foreach($tasks as $task)
+                @include('layouts.taskCard')
+            @endforeach
         </div>
     </div>
 </div>
