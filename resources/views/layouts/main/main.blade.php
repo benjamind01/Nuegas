@@ -15,18 +15,31 @@
         <div class="flex flex-row items-center justify-between">
             <h3 class="font-PlusJakartaSans font-medium text-2xl">Teachers</h3>
             <div class="flex flex-row">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 swiper-prev1">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 swiper-next1">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg> 
             </div>
         </div>
         <div id="cards" class="mt-8 flex flex-row">
-            @foreach($teachers as $teacher)
-                @include('layouts.teacherCard')
-            @endforeach
+            <div class="swiper w-full mySwiper1">
+                <div class="swiper-wrapper flex flex-row">   
+                    <div class="swiper-slide w-full flex flex-row"> 
+                        @php $countTeacher = 0 @endphp
+                        @foreach($teachers as $teacher)
+                            @if($countTeacher == 2)
+                                </div>
+                                @php $countTeacher = 0; @endphp
+                                <div class="swiper-slide flex flex-row">
+                            @endif
+                            @include('layouts.teacherCard')
+                            @php $countTeacher++; @endphp 
+                        @endforeach
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="tasks" class="mt-10 flex flex-col w-11/12">
@@ -34,19 +47,31 @@
             <div class="flex flex-row items-center justify-between">
                 <h3 class="font-PlusJakartaSans font-medium text-2xl">Upcoming Tasks</h3>
                 <div class="flex flex-row">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 swiper-prev2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                     </svg>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 swiper-next2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg> 
                 </div>
             </div>
         </div>
-        <div class="flex flex-row mt-4">
-            @foreach($tasks as $task)
-                @include('layouts.taskCard')
-            @endforeach
+        <div class="">
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper flex flex-row mt-2">   
+                    <div class="swiper-slide flex flex-row"> 
+                @php $count = 0 @endphp
+                @foreach($tasks as $task)
+                    @if($count == 2)
+                        </div>
+                        <div class="swiper-slide flex flex-row">
+                    @endif
+                    @include('layouts.taskCard')
+                    @php $count++; @endphp 
+                @endforeach
+                    </div>
+                </div>
+            </div>  
         </div>
     </div>
 </div>

@@ -1,7 +1,7 @@
 <div id="informations" class="w-3/12 bg-black">
     <div class="bg-white w-11/12  p-4 rounded-3xl ml-4 mt-6 flex flex-col">
         <h4 id="name" class="text-name-color font-medium text-md">Due Today</h4>
-        <img class="w-12/12  h-30 ml-4 object-cover rounded-2xl mt-4" src="{{ asset('Image.png') }}" alt="profil picture">
+        <img class="w-12/12  h-30 ml-4 object-cover rounded-2xl mt-4" src="tasks/task01.png" alt="profil picture">
         <div id="taskInfos" class="mt-4 text-left">
             <h4 id="name" class="text-name-color font-medium text-lg">Algorithmic 101</h4>
             <span class="text-gray text-sm">Algorithmic</span>

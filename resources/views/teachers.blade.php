@@ -10,9 +10,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="flex flex-row w-screen h-screen  bg-gray-background">
-    @include('layouts.navbar', ['page' => 'overview'])
-    @include('layouts.main.main')
-    @include('layouts.dueTask')
+    @include('layouts.navbar', ['page' => 'teachers'])
+    @include('layouts.main.mainTeachers')
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
@@ -40,5 +39,4 @@
         },
       });
 </script>
-
 </html>

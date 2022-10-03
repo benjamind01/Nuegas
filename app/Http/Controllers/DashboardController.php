@@ -10,9 +10,9 @@ class DashboardController extends Controller
 {
     public function show() {
 
-        $featuredTeachers = User::where('teacher', "=", 1)->limit(2)->get();
+        $featuredTeachers = User::where('teacher', "=", 1)->limit(10)->get();
 
-        $featuredTasks = Task::orderBy('due', 'DESC')->limit(2)->get();
+        $featuredTasks = Task::orderBy('due', 'DESC')->limit(4)->get();
 
         return view('dashboard', ['teachers' => $featuredTeachers, 'tasks' => $featuredTasks]);
     }

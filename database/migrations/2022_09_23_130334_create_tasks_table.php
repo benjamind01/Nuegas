@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('topic');
             $table->date('due');
+            $table->string('image')->default('task01.png');
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
